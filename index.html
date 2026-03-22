@@ -3,135 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дарья Соловьева | Marketing Head</title>
+    <title>Дарья Соловьева | Marketing Head & Project Lead</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root { --accent: #E51C7E; --dark: #050810; }
-        body { font-family: 'Montserrat', sans-serif; background-color: var(--dark); color: white; scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--dark); color: white; scroll-behavior: smooth; overflow-x: hidden; }
         .unbounded { font-family: 'Unbounded', sans-serif; }
         .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s ease; }
-        .text-accent { color: var(--accent); }
-        .bg-accent { background-color: var(--accent); }
         
-        /* Исправление для имени */
+        /* Исправленная верстка имени */
         .hero-name { 
-            font-size: clamp(2.5rem, 8vw, 6rem); 
-            line-height: 0.9;
+            font-size: clamp(2rem, 10vw, 5.5rem); 
+            line-height: 0.85;
+            letter-spacing: -0.05em;
             background: linear-gradient(90deg, #fff, var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            word-break: keep-all;
         }
 
-        /* Стили для аккордеона */
-        .exp-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; opacity: 0; }
-        .exp-item.active .exp-content { max-height: 300px; opacity: 1; margin-top: 1.5rem; }
-        .exp-item.active .arrow { transform: rotate(90deg); }
+        /* Аккордеон экспертизы */
+        .exp-content { max-height: 0; overflow: hidden; transition: all 0.5s cubic-bezier(0, 1, 0, 1); opacity: 0; }
+        .exp-item.active .exp-content { max-height: 1000px; opacity: 1; margin-top: 1.5rem; transition: all 0.5s cubic-bezier(1, 0, 1, 0); }
+        .exp-item.active .arrow { transform: rotate(90deg); color: var(--accent); }
         .arrow { transition: transform 0.3s ease; }
     </style>
 </head>
-<body class="antialiased selection:bg-pink-500">
+<body class="antialiased selection:bg-pink-500 selection:text-white">
 
     <nav class="fixed w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
         <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="unbounded text-sm font-bold tracking-tighter">DS<span class="text-accent italic">.</span>PROJECT</div>
-            <a href="https://t.me/solovevadary" class="bg-accent px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:opacity-80 transition">Связаться</a>
+            <div class="unbounded text-xs font-bold tracking-tighter uppercase">DS<span class="text-[#E51C7E] italic">.</span>Project</div>
+            <a href="https://t.me/solovevadary" class="bg-[#E51C7E] px-5 py-2 rounded-full text-[9px] font-black uppercase tracking-widest hover:scale-105 transition transform">Связаться</a>
         </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-6 pt-32">
+    <main class="max-w-6xl mx-auto px-6 pt-32 md:pt-48">
         
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-40">
             <div class="lg:col-span-8">
-                <div class="inline-block px-3 py-1 border border-accent/30 rounded-full mb-6 text-[10px] font-bold uppercase tracking-widest text-accent italic">
-                    Project-маркетолог
+                <div class="inline-block px-3 py-1 border border-[#E51C7E]/30 rounded-full mb-8">
+                    <span class="text-[9px] font-bold uppercase tracking-[0.3em] text-[#E51C7E] italic">Руководитель маркетинга</span>
                 </div>
-                <h1 class="unbounded font-bold mb-8 hero-name uppercase">ДАРЬЯ<br>СОЛОВЬЕВА</h1>
+                <h1 class="unbounded font-bold mb-10 hero-name uppercase">
+                    ДАРЬЯ<br>СОЛОВЬЕВА
+                </h1>
                 <p class="text-base md:text-lg opacity-60 max-w-xl mb-12 leading-relaxed font-light">
-                    Руководит маркетингом и проектами более 4 лет[cite: 7]. Фокус на рост выручки, среднего чека и устойчивость бизнеса через принятие решений на основе данных[cite: 11, 12].
+                    Более 4 лет управляю маркетингом и проектами в digital-продуктах[cite: 7]. Эксперт в запусках под ключ: от стратегии и формирования команды до кратного роста выручки и среднего чека[cite: 8, 11].
                 </p>
-                <div class="flex gap-4">
-                    <div class="glass p-6 rounded-2xl min-w-[140px]">
+                <div class="flex flex-wrap gap-4">
+                    <div class="glass p-6 rounded-2xl min-w-[160px]">
                         <span class="block text-2xl font-bold mb-1 italic">1M+ ₽</span>
-                        <span class="text-[9px] uppercase tracking-wider opacity-40 font-bold">Бюджеты в мес</span>
+                        <span class="text-[9px] uppercase tracking-wider opacity-40 font-bold">Бюджеты в месяц [cite: 17]</span>
                     </div>
-                    <div class="glass p-6 rounded-2xl min-w-[140px]">
+                    <div class="glass p-6 rounded-2xl min-w-[160px]">
                         <span class="block text-2xl font-bold mb-1 italic">+30%</span>
-                        <span class="text-[9px] uppercase tracking-wider opacity-40 font-bold">Выручка за год</span>
+                        <span class="text-[9px] uppercase tracking-wider opacity-40 font-bold">Рост выручки за год [cite: 26, 50]</span>
                     </div>
                 </div>
             </div>
-            <div class="lg:col-span-4 flex justify-center items-start">
-                <div class="relative group">
-                    <div class="absolute -inset-2 border border-accent/20 rounded-xl transform rotate-3 group-hover:rotate-0 transition duration-500"></div>
-                    <img src="photo.jpg" alt="Дарья Соловьева" class="relative rounded-xl grayscale w-full max-w-[320px] shadow-2xl">
+            <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                <div class="relative max-w-[300px] lg:max-w-none">
+                    <div class="absolute -inset-3 border border-[#E51C7E]/20 rounded-2xl transform rotate-6"></div>
+                    <img src="photo.jpg" alt="Дарья Соловьева" class="relative rounded-2xl grayscale hover:grayscale-0 transition duration-1000 shadow-2xl w-full object-cover">
                 </div>
             </div>
         </section>
 
         <section class="mb-40">
             <h2 class="unbounded text-xl mb-12 flex items-center tracking-tighter uppercase">
-                <span class="w-8 h-[1px] bg-accent mr-4"></span> Твердые результаты
+                <span class="w-8 h-[1px] bg-[#E51C7E] mr-4"></span> Результаты в цифрах
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass p-8 rounded-3xl">
-                    <div class="text-accent text-[10px] font-black mb-4 tracking-widest uppercase italic">// Продажи</div>
-                    <h3 class="text-lg font-bold mb-4">Перевыполнение плана на 20%</h3>
-                    <p class="text-xs opacity-50 leading-relaxed font-medium">Успешная пересборка продуктового предложения под новый сценарий в условиях снижения конверсий[cite: 22, 24].</p>
+                <div class="glass p-8 rounded-3xl border-t-2 border-[#E51C7E]/20">
+                    <div class="text-[#E51C7E] text-[10px] font-black mb-4 tracking-[0.2em] uppercase italic">// Продажи</div>
+                    <h3 class="text-lg font-bold mb-4 italic">Перевыполнение плана на 20% [cite: 22]</h3>
+                    <p class="text-xs opacity-50 leading-relaxed">Пересборка продуктового предложения позволила сохранить и увеличить объем продаж в условиях снижения рыночных конверсий[cite: 24].</p>
                 </div>
                 <div class="glass p-8 rounded-3xl">
-                    <div class="text-accent text-[10px] font-black mb-4 tracking-widest uppercase italic">// Системность</div>
-                    <h3 class="text-lg font-bold mb-4">Мультиканальная система</h3>
-                    <p class="text-xs opacity-50 leading-relaxed font-medium">Переход от разовых запусков к регулярной выручке через автовебинары, воронки и мини-продукты[cite: 28].</p>
+                    <div class="text-[#E51C7E] text-[10px] font-black mb-4 tracking-[0.2em] uppercase italic">// Системность</div>
+                    <h3 class="text-lg font-bold mb-4 italic">Мультиканальная система [cite: 28]</h3>
+                    <p class="text-xs opacity-50 leading-relaxed">Успешный переход от разовых запусков к регулярной выручке через внедрение автовебинаров и воронок продаж[cite: 28].</p>
                 </div>
                 <div class="glass p-8 rounded-3xl">
-                    <div class="text-accent text-[10px] font-black mb-4 tracking-widest uppercase italic">// Масштаб</div>
-                    <h3 class="text-lg font-bold mb-4">Dubai B2C Launch</h3>
-                    <p class="text-xs opacity-50 leading-relaxed font-medium">Запуск маркетинга международного приложения для брокеров: упаковка, трафик и оффлайн-активации[cite: 30, 31].</p>
+                    <div class="text-[#E51C7E] text-[10px] font-black mb-4 tracking-[0.2em] uppercase italic">// Масштаб</div>
+                    <h3 class="text-lg font-bold mb-4 italic">Dubai B2C Launch [cite: 30]</h3>
+                    <p class="text-xs opacity-50 leading-relaxed">Маркетинговый запуск приложения для брокеров в Дубае: упаковка, онлайн-трафик и международные выставки[cite: 31].</p>
                 </div>
             </div>
         </section>
 
         <section class="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-40">
             <div>
-                <h2 class="unbounded text-xl mb-10 tracking-tighter uppercase">Экспертиза</h2>
+                <h2 class="unbounded text-xl mb-10 tracking-tighter uppercase italic">Экспертиза</h2>
                 <div class="space-y-4">
-                    <div class="exp-item glass rounded-2xl p-6 cursor-pointer" onclick="toggleExp(this)">
+                    <div class="exp-item glass rounded-2xl p-6 cursor-pointer group" onclick="this.classList.toggle('active')">
                         <div class="flex items-center justify-between">
-                            <span class="font-bold uppercase tracking-widest text-[11px]">01 // Education & Psychology</span>
-                            <span class="arrow text-accent font-bold">→</span>
+                            <span class="font-bold uppercase tracking-widest text-[11px] group-hover:text-[#E51C7E] transition">01 // Education & Psychology [cite: 19]</span>
+                            <span class="arrow text-[#E51C7E] font-bold">→</span>
                         </div>
                         <div class="exp-content">
-                            <ul class="text-xs space-y-3 opacity-60 font-medium">
-                                <li>• Управление онлайн-продуктами и подписками под ключ[cite: 19].</li>
-                                <li>• Разработка стратегий для ниш образования и психологии[cite: 19].</li>
-                                <li>• Работа с базой и рост повторных продаж (+30% за год)[cite: 50].</li>
+                            <ul class="text-xs space-y-4 opacity-60 font-medium leading-loose italic">
+                                <li>• Полное управление маркетингом и проектами под ключ (от стратегии до команды)[cite: 16].</li>
+                                <li>• Фокус на рост выручки, LTV и устойчивость образовательного бизнеса[cite: 11, 20].</li>
+                                <li>• Работа с базой клиентов и внедрение новых продуктов под запрос аудитории[cite: 49, 50].</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="exp-item glass rounded-2xl p-6 cursor-pointer" onclick="toggleExp(this)">
+                    <div class="exp-item glass rounded-2xl p-6 cursor-pointer group" onclick="this.classList.toggle('active')">
                         <div class="flex items-center justify-between">
-                            <span class="font-bold uppercase tracking-widest text-[11px]">02 // Real Estate & Investment</span>
-                            <span class="arrow text-accent font-bold">→</span>
+                            <span class="font-bold uppercase tracking-widest text-[11px] group-hover:text-[#E51C7E] transition">02 // Real Estate & Investment [cite: 19]</span>
+                            <span class="arrow text-[#E51C7E] font-bold">→</span>
                         </div>
                         <div class="exp-content">
-                            <ul class="text-xs space-y-3 opacity-60 font-medium">
-                                <li>• Маркетинг на международном рынке (Дубай)[cite: 32].</li>
-                                <li>• Организация оффлайн-активаций и выставок для привлечения пользователей[cite: 45].</li>
-                                <li>• Получение первых реферальных сделок через B2C-приложение[cite: 32].</li>
+                            <ul class="text-xs space-y-4 opacity-60 font-medium leading-loose italic">
+                                <li>• Запуск маркетинга международного IT-продукта на рынке ОАЭ[cite: 30, 31].</li>
+                                <li>• Организация оффлайн-активаций на выставках и работа в многоязычной среде[cite: 31, 45, 46].</li>
+                                <li>• Лидогенерация и получение первых реферальных сделок в приложении[cite: 32].</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="exp-item glass rounded-2xl p-6 cursor-pointer" onclick="toggleExp(this)">
+                    <div class="exp-item glass rounded-2xl p-6 cursor-pointer group" onclick="this.classList.toggle('active')">
                         <div class="flex items-center justify-between">
-                            <span class="font-bold uppercase tracking-widest text-[11px]">03 // Team Management</span>
-                            <span class="arrow text-accent font-bold">→</span>
+                            <span class="font-bold uppercase tracking-widest text-[11px] group-hover:text-[#E51C7E] transition">03 // Team Management [cite: 18]</span>
+                            <span class="arrow text-[#E51C7E] font-bold">→</span>
                         </div>
                         <div class="exp-content">
-                            <ul class="text-xs space-y-3 opacity-60 font-medium">
-                                <li>• Управление командами от 3 до 20 человек (включая подрядчиков)[cite: 18, 37].</li>
-                                <li>• Контроль сроков, рекламных бюджетов (1+ млн ₽) и качества реализации[cite: 37, 42].</li>
-                                <li>• Прямая работа с собственниками в условиях неопределенности[cite: 14].</li>
+                            <ul class="text-xs space-y-4 opacity-60 font-medium leading-loose italic">
+                                <li>• Управление командами от 3 до 20 человек и внешними подрядчиками[cite: 18, 37].</li>
+                                <li>• Контроль бюджетов до 1+ млн рублей в месяц и выполнение KPI по выручке[cite: 17, 36, 37].</li>
+                                <li>• Эффективная работа напрямую с собственниками в условиях неопределенности[cite: 14].</li>
                             </ul>
                         </div>
                     </div>
@@ -139,13 +141,12 @@
             </div>
 
             <div>
-                <h2 class="unbounded text-xl mb-10 tracking-tighter uppercase">Образование</h2>
-                <div class="glass p-8 rounded-3xl relative overflow-hidden group">
-                    <div class="absolute -right-4 -top-4 w-24 h-24 bg-accent/10 rounded-full blur-2xl group-hover:bg-accent/20 transition"></div>
+                <h2 class="unbounded text-xl mb-10 tracking-tighter uppercase italic">Образование</h2>
+                <div class="glass p-10 rounded-3xl relative overflow-hidden group border-b border-[#E51C7E]/30">
                     <div class="relative z-10">
-                        <h4 class="font-bold uppercase tracking-widest text-xs mb-2">ВГТУ (Волгоград) [cite: 52]</h4>
-                        <p class="text-[10px] text-accent font-black uppercase mb-6 tracking-widest italic">Два диплома с отличием [cite: 53, 54]</p>
-                        <div class="space-y-4 opacity-50 text-xs font-bold uppercase tracking-tighter">
+                        <h4 class="font-bold uppercase tracking-widest text-xs mb-3">ВГТУ (Волгоград) [cite: 52]</h4>
+                        <p class="text-[10px] text-[#E51C7E] font-black uppercase mb-8 tracking-[0.2em] italic">Два диплома с отличием </p>
+                        <div class="space-y-6 opacity-50 text-[11px] font-bold uppercase tracking-tighter leading-relaxed">
                             <p>— Информатика и вычислительная техника [cite: 53]</p>
                             <p>— Бухгалтерский учет, анализ и аудит [cite: 54]</p>
                         </div>
@@ -155,25 +156,15 @@
         </section>
     </main>
 
-    <footer class="py-20 border-t border-white/5 bg-black/20">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="unbounded text-2xl md:text-4xl mb-10 italic uppercase tracking-tighter">Ready for <br><span class="text-accent underline decoration-1 underline-offset-8">next big challenge</span></p>
-            <div class="flex justify-center space-x-12">
-                <a href="mailto:darysoloveva@gmail.com" class="text-[10px] font-black uppercase tracking-[0.3em] opacity-40 hover:opacity-100 transition">Email</a>
-                <a href="https://t.me/solovevadary" class="text-[10px] font-black uppercase tracking-[0.3em] text-accent">Telegram</a>
-            </div>
+    <footer class="py-24 border-t border-white/5 bg-black/20 text-center">
+        <h2 class="unbounded text-3xl md:text-5xl mb-16 italic uppercase tracking-tighter">Ready for <br><span class="text-[#E51C7E]">New Challenges</span></h2>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+            <a href="mailto:darysoloveva@gmail.com" class="text-[10px] font-black uppercase tracking-[0.4em] opacity-40 hover:opacity-100 transition hover:text-[#E51C7E]">Email [cite: 5]</a>
+            <a href="https://instagram.com/solovevadary" class="text-[10px] font-black uppercase tracking-[0.4em] opacity-40 hover:opacity-100 transition hover:text-[#E51C7E]">Instagram [cite: 5]</a>
+            <a href="https://t.me/solovevadary" class="text-[10px] font-black uppercase tracking-[0.4em] text-[#E51C7E] hover:underline underline-offset-8 transition">Telegram [cite: 5]</a>
         </div>
+        <p class="mt-20 text-[8px] opacity-20 uppercase font-bold tracking-[0.6em]">Saint Petersburg // 2026 // Daria Soloveva [cite: 1, 3]</p>
     </footer>
 
-    <script>
-        function toggleExp(element) {
-            // Закрываем другие открытые элементы
-            document.querySelectorAll('.exp-item').forEach(item => {
-                if (item !== element) item.classList.remove('active');
-            });
-            // Переключаем текущий
-            element.classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
