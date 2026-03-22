@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daria Soloveva | Project Lead & Marketing Head</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #E51C7E;
+            --dark: #0F172A;
+        }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--dark);
+            color: white;
+        }
+        .unbounded { font-family: 'Unbounded', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass:hover {
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .text-accent { color: var(--accent); }
+        .bg-accent { background-color: var(--accent); }
+        .photo-container {
+            position: relative;
+            z-index: 1;
+        }
+        .photo-container::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 2px solid var(--accent);
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+        <div class="unbounded text-xl font-bold tracking-tighter">DS<span class="text-accent">.</span>MARKETING</div>
+        <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest opacity-60">
+            <a href="#about" class="hover:text-accent transition">About</a>
+            <a href="#results" class="hover:text-accent transition">Results</a>
+            <a href="#experience" class="hover:text-accent transition">Experience</a>
+        </div>
+        <a href="https://t.me/solovevadary" class="bg-accent px-6 py-3 rounded-full text-xs font-extrabold uppercase tracking-widest hover:scale-105 transition transform">Contact Me</a>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-32">
+            <div class="lg:col-span-7">
+                <h1 class="unbounded text-5xl md:text-7xl font-bold leading-none mb-8">
+                    УПРАВЛЯЮ <span class="text-accent italic">ВЫРУЧКОЙ</span> И КОМАНДАМИ
+                </h1>
+                <p class="text-lg opacity-70 max-w-xl mb-10 leading-relaxed">
+                    Руководитель маркетинга и Project-маркетолог из Санкт-Петербурга[cite: 2, 3]. Фокус на устойчивость бизнеса, рост среднего чека и принятие решений на основе данных[cite: 11, 12].
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="glass px-6 py-4 rounded-2xl">
+                        <span class="block text-2xl font-bold unbounded">4+ года</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-50">Опыта в Digital [cite: 7]</span>
+                    </div>
+                    <div class="glass px-6 py-4 rounded-2xl">
+                        <span class="block text-2xl font-bold unbounded">1М+ ₽</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-50">Бюджеты в мес [cite: 17]</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5">
+                <div class="photo-container">
+                    <img src="photo.jpg" alt="Дарья Соловьева" class="w-full grayscale hover:grayscale-0 transition duration-700 rounded-sm shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="mb-32">
+            <h2 class="unbounded text-2xl mb-12 flex items-center">
+                <span class="w-12 h-[2px] bg-accent mr-4"></span> КЛЮЧЕВЫЕ РЕЗУЛЬТАТЫ [cite: 21]
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass p-10 rounded-3xl border-l-4 border-accent">
+                    <div class="text-5xl font-bold unbounded text-accent mb-4">+30%</div>
+                    <p class="text-sm font-semibold opacity-80 uppercase tracking-tight">Рост годовой выручки проекта [cite: 26, 50]</p>
+                </div>
+                <div class="glass p-10 rounded-3xl">
+                    <div class="text-5xl font-bold unbounded mb-4">+20%</div>
+                    <p class="text-sm font-semibold opacity-80 uppercase tracking-tight">Перевыполнение плана продаж [cite: 22, 24]</p>
+                </div>
+                <div class="glass p-10 rounded-3xl">
+                    <div class="text-5xl font-bold unbounded mb-4">Launch</div>
+                    <p class="text-sm font-semibold opacity-80 uppercase tracking-tight">Запуск B2C-приложения в Дубае [cite: 30, 45]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32">
+            <div>
+                <h2 class="unbounded text-2xl mb-12">ЭКСПЕРТИЗА [cite: 19]</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between p-6 glass rounded-2xl">
+                        <span class="font-bold uppercase tracking-widest text-sm text-accent">Образование & Психология</span>
+                        <span class="opacity-30">01</span>
+                    </div>
+                    <div class="flex items-center justify-between p-6 glass rounded-2xl">
+                        <span class="font-bold uppercase tracking-widest text-sm text-accent">Инвестиции & Недвижимость</span>
+                        <span class="opacity-30">02</span>
+                    </div>
+                    <div class="flex items-center justify-between p-6 glass rounded-2xl">
+                        <span class="font-bold uppercase tracking-widest text-sm text-accent">Управление командами 3-10 чел. [cite: 18]</span>
+                        <span class="opacity-30">03</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="unbounded text-2xl mb-12">ОБРАЗОВАНИЕ [cite: 51]</h2>
+                <div class="glass p-8 rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 font-black text-6xl">IQ</div>
+                    <h3 class="font-bold text-accent mb-2 uppercase tracking-widest">ВГТУ (Волгоград) [cite: 52]</h3>
+                    <p class="text-sm opacity-70 mb-4 font-semibold uppercase">Два диплома с отличием [cite: 53, 54]</p>
+                    <ul class="text-xs space-y-2 opacity-60 font-bold uppercase tracking-tighter">
+                        <li>• Информатика и выч. техника [cite: 53]</li>
+                        <li>• Бухгалтерский учет, анализ и аудит [cite: 54]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-white/10 py-20 bg-black/30">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="unbounded text-4xl md:text-6xl mb-12">ГОТОВА К <span class="text-accent italic">МАСШТАБНЫМ</span> ПРОЕКТАМ</h2>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:darysoloveva@gmail.com" class="text-sm font-bold uppercase tracking-widest opacity-50 hover:opacity-100 transition">Email [cite: 5]</a>
+                <a href="https://instagram.com/solovevadary" class="text-sm font-bold uppercase tracking-widest opacity-50 hover:opacity-100 transition">Instagram [cite: 5]</a>
+                <a href="https://t.me/solovevadary" class="text-sm font-bold uppercase tracking-widest text-accent hover:underline transition">Telegram [cite: 5]</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
